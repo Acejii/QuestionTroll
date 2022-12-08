@@ -27,6 +27,10 @@ const MouseOver = () => {
     alert('Bạn đã trở thành con gà!!')
   }
 
+  const handleNotSubmit = () => {
+    alert('M vẫn là gà thôi =))')
+  }
+
   return (
     <div className="w-[500px] h-[500px] border-2 shadow-2xl mt-10 mx-auto py-10 text-center">
       <div className="text-[20px] font-bold mb-10">Mày là con gà đúng không?</div>
@@ -44,7 +48,7 @@ const MouseOver = () => {
             )
           }
         >
-          <button className={`px-8 py-3 bg-green-300 rounded-xl`}>
+          <button className={`px-8 py-3 bg-green-300 rounded-xl`} onClick={handleNotSubmit}>
             No No
           </button>
         </div>
