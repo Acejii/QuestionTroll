@@ -1,4 +1,7 @@
 import React from "react";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import {GiChicken} from 'react-icons/gi'
 
 const MouseOver = () => {
   const handleOverMouse = (
@@ -19,11 +22,17 @@ const MouseOver = () => {
     }
   };
 
+  const handleSubmit = () => {
+    alert('Bạn đã trở thành con gà!!')
+  }
+
   return (
     <div className="w-[500px] h-[500px] border-2 shadow-2xl mt-10 mx-auto py-10 text-center">
       <div className="text-[20px] font-bold mb-10">Mày là con gà đúng không?</div>
       <div className="flex items-center justify-center">
-        <button className="px-8 py-3 bg-blue-300 rounded-xl">Chính xác</button>
+      <Tippy content={<div className="text-center flex justify-center items-center">Đúng rồi, nhấn vào đây, con gà <span className="text-center ml-2"><GiChicken color="yellow"/></span></div>}>
+        <button className="px-8 py-3 bg-blue-400 rounded-xl hover:bg-blue-300" onClick={handleSubmit}>Chính xác</button>
+  </Tippy>
         <div
           className={`p-5`}
           onMouseOver={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
