@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Bank from "./components/Bank/Bank";
+import MouseOver from "./components/MouseOver/MouseOver";
+import Selection from "./components/Select/Selection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-[800px] w-full relative">
+    {/* <div className="w-[500px] mx-auto border-2 border-gray-100 shadow-xl h-[500px] text-center mt-[100px]">
+      <Bank /> 
+      <Selection />
+    </div> */}
+    <MouseOver />
     </div>
   );
 }
