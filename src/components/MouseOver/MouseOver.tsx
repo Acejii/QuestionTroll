@@ -10,7 +10,7 @@ const MouseOver = () => {
     left: number
   ) => {
     if (e.target instanceof HTMLDivElement) {
-      if (Math.abs(top - left) <= 50) {
+      if (Math.abs(top - e.target.offsetTop) <= 100) {
         e.target.style.position = "absolute";
         e.target.style.top = `${top + 100}px`;
         e.target.style.left = `${left}px`;
@@ -32,7 +32,7 @@ const MouseOver = () => {
       <div className="flex items-center justify-center">
       <Tippy content={<div className="text-center flex justify-center items-center">Đúng rồi, nhấn vào đây, con gà <span className="text-center ml-2"><GiChicken color="yellow"/></span></div>}>
         <button className="px-8 py-3 bg-blue-400 rounded-xl hover:bg-blue-300" onClick={handleSubmit}>Chính xác</button>
-  </Tippy>
+      </Tippy>
         <div
           className={`p-5`}
           onMouseOver={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
