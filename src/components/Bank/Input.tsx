@@ -29,9 +29,9 @@ const Input = (props: Props) => {
     }
   return (
     <form onSubmit={handleSubmit}>
-        <label htmlFor="input">{props.label}</label>
-        <input id='input' type='number' value={value} onChange = {(e) => setValue(Number(e.target.value))} ref={inputRef}/>
-        <button type='submit'>Submit</button>
+        <label htmlFor="input" className='font-bold inline-block w-[100px]'>{props.label}</label>
+        <input className='w-[100px]' id='input' type='number' value={value} onChange = {(e) => setValue(Number(e.target.value))} ref={inputRef}/>
+        <button className='ml-3 shadow-md' type='submit'>Submit</button>
     </form>
   )
 }

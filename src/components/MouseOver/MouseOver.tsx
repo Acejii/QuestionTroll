@@ -10,8 +10,7 @@ const MouseOver = () => {
     left: number
   ) => {
     if (e.target instanceof HTMLDivElement) {
-      if (Math.abs(top - e.target.offsetTop) <= 100) {
-        console.log('here')
+      if (Math.abs(top - e.target.offsetTop) <= 100 || Math.abs(left - e.target.offsetLeft) <= 100) {
         e.target.style.position = "absolute";
         e.target.style.top = `${top + 100}px`;
         e.target.style.left = `${left + 100}px`;
