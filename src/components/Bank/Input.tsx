@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { useDispatch} from 'react-redux'
+import { useAppDispatch } from '../../hooks';
 import { bankrupt, deposit, withdraw } from './bankSlice';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Input = (props: Props) => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const [value, setValue] = useState<number>(0)
     const inputRef = useRef<HTMLInputElement | null>(null)
 

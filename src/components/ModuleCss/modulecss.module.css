@@ -1,0 +1,12 @@
+.module {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.true {
+    color: blue;
+}
+
+.value {
+    color: red;
+}

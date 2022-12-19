@@ -19,6 +19,17 @@ body {
     position: relative;
 }
 
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 input {
     border: 1px solid blue;
     border-color: rgba(red, green, blue, 0.5);
@@ -35,3 +46,4 @@ input {
 .item.active {
     background-color: #86efac;
 }
+

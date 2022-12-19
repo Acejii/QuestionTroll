@@ -5,9 +5,9 @@ const AxiosTest = () => {
     const [data, setdata] = useState<string[]>([])
     useEffect(() => {
         const fetchData = async () => {
-            axios.post('https://jsonplaceholder.typicode.com/todos/1', {}, {})
+            axios.get('https://jsonplaceholder.typicode.com/posts')
             .then((res) => {
-                console.log(res)
+                setdata(res.data)
             }, (error) => {
                 console.log(error)
             })
@@ -15,7 +15,9 @@ const AxiosTest = () => {
         fetchData()
     }, [])
   return (
-    <div>AxiosTest</div>
+    <div>{data.map((item:any) => {
+        return <p key={item.id}>{item.title}</p>
+    })}</div>
   )
 }
 
