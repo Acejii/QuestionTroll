@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, current, original, PayloadAction } from "@reduxjs/toolkit";
 import { Item } from "./interface";
+import store from "../../store";
 
 const setLocalStorage = (value: Item[]) => {
 return localStorage.setItem('items', JSON.stringify(value))
@@ -23,6 +24,7 @@ const selectSlice = createSlice({
         setSelectedItem(state: State, action: PayloadAction<Item>) {
             state.selectedItems = [...state.selectedItems, action.payload]
             setLocalStorage(state.selectedItems)
+            console.log(current(state))
         },
 
         removeSelectItem(state: State, action: PayloadAction<Item>) {

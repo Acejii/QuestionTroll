@@ -16,7 +16,6 @@ const ModuleCss = lazy(() => import('./components/ModuleCss/ModuleCss'))
 
 function App() {
   return (
-     <Suspense fallback={<div>Loading...</div>}>
     <div className="min-h-[800px] w-full relative">
       <div className="p-4 bg-slate-400">
         <ul className="flex gap-3">
@@ -41,6 +40,8 @@ function App() {
           
         </ul>
       </div>
+      
+      <Suspense fallback={<div>Loading...</div>}>
     <div className="w-[500px] mx-auto border-2 border-gray-100 shadow-xl h-[500px] text-center mt-[100px]">
      <Routes>
      <Route path="/" element={<MouseOver />}/>
@@ -51,8 +52,8 @@ function App() {
       <Route path='/modulecss' element={<ModuleCss value="true"/>}/>
      </Routes>
     </div>
-    </div>
      </Suspense>
+    </div>
   );
 }
 
