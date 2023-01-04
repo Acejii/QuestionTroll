@@ -15,11 +15,9 @@ const items = [
 ]
 
 const Selection:React.FC = () => {
-
   const [open, setOpen] = useState<boolean>(false)
   const {selectedItems} = useSelector((state: RootState) => state.select)
   const dispatch = useDispatch()
-
   const modalRef = useRef<HTMLDivElement | null>(null)
 
   const handleOpenSelect = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {

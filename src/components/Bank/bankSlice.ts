@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface State {
     money: number;
@@ -12,15 +12,15 @@ const bankSlice = createSlice({
     name: 'bank',
     initialState,
     reducers: {
-        deposit: (state: State, action: PayloadAction<number>) => {
+        deposit: (state, action: PayloadAction<number>) => {
             state.money += action.payload
         },
 
-        withdraw: (state: State, action: PayloadAction<number>) => {
+        withdraw: (state, action: PayloadAction<number>) => {
             state.money -= action.payload
         },
 
-        bankrupt: (state: State, action: PayloadAction<number>) => {
+        bankrupt: (state, action: PayloadAction<number>) => {
             state.money *= action.payload
         }
     }

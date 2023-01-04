@@ -43,7 +43,26 @@ input {
     display: block;
 }
 
+.item:not(.item.active):hover {
+    background-color: #575016;
+}
+
 .item.active {
     background-color: #86efac;
+}
+
+.nav-item.active {
+    color: blue;
+    position: relative;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: black;
 }
 

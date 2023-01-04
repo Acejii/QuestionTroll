@@ -1,6 +1,5 @@
 import React from 'react'
 import { useAppSelector } from '../../hooks';
-import { RootState } from '../../store';
 import Bankrupt from './Bankrupt';
 import Deposit from './Deposit';
 import Withdraw from './Withdraw';

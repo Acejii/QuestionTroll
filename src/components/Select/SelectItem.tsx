@@ -23,7 +23,7 @@ const SelectItem = (props: IProps) => {
         }
     }, [selectedItems])
   return (
-    <div className={`item p-2 my-1 hover:bg-green-300 hover:cursor-pointer ${active? 'active': ''}`} onClick={onClick}>{value}</div>
+    <div className={`item p-2 my-1 cursor-pointer ${active? 'active': ''}`} onClick={onClick}>{value}</div>
   )
 }
 
